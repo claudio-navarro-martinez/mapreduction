@@ -1,0 +1,8 @@
+#!/usr/bin/python
+regex = '(.*?) - - \[(.*?)\] "(.*?)" (\d+) (.*?)'
+import sys
+import re
+i = int(0)
+for line in sys.stdin:
+        aupa=re.match(regex, line).groups()
+        print "{0} {1} {2}".format(aupa[0], aupa[1][0:2], 1)
